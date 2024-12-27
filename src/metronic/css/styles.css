@@ -1,0 +1,8 @@
+/* Demos */
+@import "demos/demo1.css";
+
+/* Tailwind core */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
