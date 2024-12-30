@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useRouter } from "next/router"; // Import useRouter từ Next.js
 import AuthLayout from "@/components/AuthLayout";
+import Image from "next/image";
 
 export default function SignIn() {
   const [username, setUsername] = useState(""); // Username
@@ -57,23 +58,27 @@ export default function SignIn() {
         <div className="text-red-600 text-sm mb-4 text-center">{error}</div>
       )}
       <div className="flex gap-4 mb-6">
-        <button className="flex-1 py-2 px-4 bg-gray-100 border rounded-lg hover:bg-gray-200 flex items-center justify-center">
-          <img
-            alt="Google"
-            src="/public/media/brand-logos/google.svg"
-            className="w-4 h-4 mr-2"
-          />
-          Use Google
-        </button>
-        <button className="flex-1 py-2 px-4 bg-gray-100 border rounded-lg hover:bg-gray-200 flex items-center justify-center">
-          <img
-            alt="Apple"
-            src="/public/media/brand-logos/apple-black.svg"
-            className="w-4 h-4 mr-2"
-          />
-          Use Apple
-        </button>
-      </div>
+      <button className="flex-1 py-2 px-4 bg-gray-100 border rounded-lg hover:bg-gray-200 flex items-center justify-center">
+        <Image
+          alt="Google"
+          src="/media/brand-logos/google.svg" 
+          className="w-4 h-4 mr-2"
+          width={16} 
+          height={16}
+        />
+        Use Google
+      </button>
+      <button className="flex-1 py-2 px-4 bg-gray-100 border rounded-lg hover:bg-gray-200 flex items-center justify-center">
+        <Image
+          alt="Apple"
+          src="/media/brand-logos/apple-black.svg" 
+          className="w-4 h-4 mr-2"
+          width={16} 
+          height={16}
+        />
+        Use Apple
+      </button>
+    </div>
       <div className="flex items-center gap-2 mb-6">
         <span className="border-t border-gray-300 w-full"></span>
         <span className="text-xs text-gray-500 uppercase">Or</span>
