@@ -1,9 +1,13 @@
-import React from "react";
+import DashboardLayout from "@/components/DashboardLayout";
 
 export default function Dashboard() {
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <h1 className="text-3xl font-bold">Welcome to the Dashboard!</h1>
-    </div>
+    <DashboardLayout>
+      <div className="text-gray-800">
+        <h1 className="text-2xl font-bold mb-4">Welcome to the Dashboard</h1>
+        <p className="text-gray-600">This is your central hub for analytics and management.</p>
+        {/* Thêm nội dung trang chính của bạn tại đây */}
+      </div>
+    </DashboardLayout>
   );
 }
