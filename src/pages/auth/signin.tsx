@@ -1,145 +1,144 @@
 import { useState } from "react";
-import { useRouter } from "next/router"; // Import useRouter từ Next.js
+import { useRouter } from "next/router";
+import axios from "axios";
 import AuthLayout from "@/components/AuthLayout";
 import Image from "next/image";
 
 export default function SignIn() {
-  const [username, setUsername] = useState(""); // Username
-  const [password, setPassword] = useState(""); // Password
-  const [showPassword, setShowPassword] = useState(false); // Toggle mật khẩu
-  const [error, setError] = useState<string | null>(null); // Error state
-  const router = useRouter(); // Sử dụng router để điều hướng
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
 
     try {
-      const response = await fetch("/api/external-login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, password }),
+      const response = await axios.post("https://api.gw-sms.com/api/portal/auth/login", {
+        username,
+        password,
+      }, {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
       });
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || "Login failed");
-      }
-
-      const data = await response.json();
-      console.log("Đăng nhập thành công:", data);
-
-      // Lưu token vào localStorage
-      localStorage.setItem("authToken", data.token);
-
-      // Điều hướng đến Dashboard
+      // Lưu thông tin token nếu đăng nhập thành công
+      localStorage.setItem("authToken", response.data.token);
       router.push("/dashboard");
     } catch (err) {
-      if (err instanceof Error) {
-        setError(err.message);
+      if (axios.isAxiosError(err) && err.response) {
+        setError(err.response.data.message || "Login failed");
       } else {
         setError("Unexpected error occurred");
       }
     }
   };
 
+  const togglePassword = () => {
+    setShowPassword(!showPassword);
+  };
+
   return (
-    <AuthLayout>
-      <div className="text-center mb-6">
-        <h3 className="text-lg font-medium text-gray-900">Sign in</h3>
-        <p className="text-sm text-gray-500">
-          Need an account?{" "}
-          <a href="#" className="text-blue-600">
-            Sign up
-          </a>
-        </p>
-      </div>
-      {error && (
-        <div className="text-red-600 text-sm mb-4 text-center">{error}</div>
-      )}
-      <div className="flex gap-4 mb-6">
-      <button className="flex-1 py-2 px-4 bg-gray-100 border rounded-lg hover:bg-gray-200 flex items-center justify-center">
-        <Image
-          alt="Google"
-          src="/media/brand-logos/google.svg" 
-          className="w-4 h-4 mr-2"
-          width={16} 
-          height={16}
-        />
-        Use Google
-      </button>
-      <button className="flex-1 py-2 px-4 bg-gray-100 border rounded-lg hover:bg-gray-200 flex items-center justify-center">
-        <Image
-          alt="Apple"
-          src="/media/brand-logos/apple-black.svg" 
-          className="w-4 h-4 mr-2"
-          width={16} 
-          height={16}
-        />
-        Use Apple
-      </button>
-    </div>
-      <div className="flex items-center gap-2 mb-6">
-        <span className="border-t border-gray-300 w-full"></span>
-        <span className="text-xs text-gray-500 uppercase">Or</span>
-        <span className="border-t border-gray-300 w-full"></span>
-      </div>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        <div>
-          <label htmlFor="username" className="block text-sm font-medium text-gray-900 mb-2">
-            Username
-          </label>
-          <input
-            type="text" // Thay đổi sang input text
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-            placeholder="Enter your username"
-            required
-          />
-        </div>
-        <div>
-          <div className="flex items-center justify-between">
-            <label htmlFor="password" className="block text-sm font-medium text-gray-900 mb-2">
-              Password
+    <AuthLayout title="Trang đăng nhập">
+      <div className="flex items-center justify-center grow bg-center bg-no-repeat page-bg">
+        <style jsx>{`
+          .page-bg {
+            background-image: url("/media/images/2600x1200/bg-10.png");
+          }
+        `}</style>
+        <div className="card max-w-[370px] w-full">
+          <form
+            className="card-body flex flex-col gap-5 p-10"
+            id="sign_in_form"
+            onSubmit={handleSubmit}
+          >
+            <div className="text-center mb-2.5">
+              <h3 className="text-lg font-medium text-gray-900 leading-none mb-2.5">Sign in</h3>
+              <div className="flex items-center justify-center font-medium">
+                <span className="text-2sm text-gray-700 me-1.5">Need an account?</span>
+                <a className="text-2sm link" href="/sign-up">Sign up</a>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-2.5">
+              <a className="btn btn-light btn-sm justify-center" href="#">
+                <Image
+                  alt="Google Logo"
+                  src="/media/brand-logos/google.svg"
+                  width={16}
+                  height={16}
+                />
+                Use Google
+              </a>
+              <a className="btn btn-light btn-sm justify-center" href="#">
+                <Image
+                  alt="Apple Logo"
+                  src="/media/brand-logos/apple-black.svg"
+                  width={16}
+                  height={16}
+                  className="dark:hidden"
+                />
+                <Image
+                  alt="Apple Logo"
+                  src="/media/brand-logos/apple-white.svg"
+                  width={16}
+                  height={16}
+                  className="light:hidden"
+                />
+                Use Apple
+              </a>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="border-t border-gray-200 w-full"></span>
+              <span className="text-2xs text-gray-500 font-medium uppercase">Or</span>
+              <span className="border-t border-gray-200 w-full"></span>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label className="form-label font-normal text-gray-900">Username</label>
+              <input
+                className="input"
+                placeholder="Enter your username"
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+            </div>
+            <div className="flex flex-col gap-1">
+              <div className="flex items-center justify-between gap-1">
+                <label className="form-label font-normal text-gray-900">Password</label>
+                <a className="text-2sm link shrink-0" href="/reset-password">Forgot Password?</a>
+              </div>
+              <div className="input flex items-center">
+                <input
+                  name="user_password"
+                  placeholder="Enter Password"
+                  type={showPassword ? "text" : "password"}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <button
+                  className="btn btn-icon"
+                  data-toggle-password-trigger="true"
+                  type="button"
+                  onClick={togglePassword}
+                >
+                  <i className={`ki-filled ki-eye text-gray-500 ${showPassword ? "hidden" : "block"}`}></i>
+                  <i className={`ki-filled ki-eye-slash text-gray-500 ${showPassword ? "block" : "hidden"}`}></i>
+                </button>
+              </div>
+            </div>
+            <label className="checkbox-group">
+              <input className="checkbox checkbox-sm" type="checkbox" />
+              <span className="checkbox-label">Remember me</span>
             </label>
-            <a href="#" className="text-sm text-blue-600">
-              Forgot Password?
-            </a>
-          </div>
-          <div className="relative">
-            <input
-              type={showPassword ? "text" : "password"}
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 pr-10"
-              placeholder="Enter Password"
-              required
-            />
-            <button
-              type="button"
-              onClick={() => setShowPassword(!showPassword)}
-              className="absolute inset-y-0 right-3 flex items-center text-gray-600 hover:text-gray-800"
-            >
-              {showPassword ? "🙈" : "👁"}
-            </button>
-          </div>
+            {error && <div className="text-red-500 text-sm">{error}</div>}
+            <button className="btn btn-primary flex justify-center grow">Sign In</button>
+          </form>
         </div>
-        <div className="flex items-center">
-          <input type="checkbox" id="remember" className="mr-2" />
-          <label htmlFor="remember" className="text-sm text-gray-600">
-            Remember me
-          </label>
-        </div>
-        <button
-          type="submit"
-          className="w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-        >
-          Sign In
-        </button>
-      </form>
+      </div>
     </AuthLayout>
   );
 }

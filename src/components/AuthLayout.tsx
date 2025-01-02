@@ -1,16 +1,22 @@
 import React from "react";
-
+import Head from "next/head";
+import dynamic from "next/dynamic";
 interface AuthLayoutProps {
   children: React.ReactNode;
+  title: string;
 }
 
-const AuthLayout: React.FC<AuthLayoutProps> = ({ children }) => {
+const GlobalInit = dynamic(() => import("./GlobalInit"), { ssr: false });
+
+const AuthLayout: React.FC<AuthLayoutProps> = ({ title, children }) => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="w-full max-w-md bg-white shadow-lg rounded-lg p-6">
-        {children}
-      </div>
-    </div>
+    <>
+            <Head>
+                <title>{title}</title>
+            </Head>
+            <>{children}</>
+            <GlobalInit />
+        </>
   );
 };
 
