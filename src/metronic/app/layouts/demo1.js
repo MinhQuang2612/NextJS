@@ -60,4 +60,8 @@ class KTLayout {
 	}
 }
 
+KTDom.ready(() => {
+	// KTLayout.init();
+});
+
 export default KTLayout;

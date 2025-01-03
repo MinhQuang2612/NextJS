@@ -2,7 +2,7 @@ export default function Header() {
     return (
         <header className="header fixed top-0 z-10 start-0 end-0 flex items-stretch shrink-0 bg-[--tw-page-bg] dark:bg-[--tw-page-bg-dark]" data-sticky="true" data-sticky-class="shadow-sm" data-sticky-name="header" id="header">
 
-          <div className="container-fixed flex justify-between items-stretch lg:gap-4" id="header_container">
+          <div className="container-fluid flex justify-between items-stretch lg:gap-4" id="header_container">
 
             <div className="flex gap-1 lg:hidden items-center -ms-1">
               <a className="shrink-0" href="html/demo1.html">

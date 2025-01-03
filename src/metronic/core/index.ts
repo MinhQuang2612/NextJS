@@ -70,7 +70,7 @@ const KTComponents = {
 		KTTheme.init();
 		KTImageInput.init();
 		KTTogglePassword.init();
-		KTDataTable.init();
+		// KTDataTable.init();
 	}
 };
 
@@ -125,7 +125,7 @@ window.KTStepper = KTStepper;
 window.KTTheme = KTTheme;
 window.KTImageInput = KTImageInput;
 window.KTTogglePassword = KTTogglePassword;
-window.KTDataTable = KTDataTable;
+// window.KTDataTable = KTDataTable;
 window.KTComponents = KTComponents;
 
 export default KTComponents;
