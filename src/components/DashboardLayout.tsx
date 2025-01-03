@@ -18,7 +18,6 @@ export default function DashboardLayout({ title, children }: DashboardLayoutProp
       <Head>
         <title>{title}</title>
       </Head>
-      <>
         <div className="flex grow">
           <Sidebar />
           <div className="wrapper flex grow flex-col">
@@ -27,7 +26,6 @@ export default function DashboardLayout({ title, children }: DashboardLayoutProp
             <Footer />
           </div>
         </div>
-      </>
       <GlobalInit />
     </>
   );

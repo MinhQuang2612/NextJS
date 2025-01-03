@@ -1,12 +1,12 @@
 export default function Header() {
     return (
-        <header className="header fixed top-0 z-10 start-0 end-0 flex items-stretch shrink-0 bg-[--tw-page-bg] dark:bg-[--tw-page-bg-dark]" data-sticky="true" data-sticky-className="shadow-sm" data-sticky-name="header" id="header">
+        <header className="header fixed top-0 z-10 start-0 end-0 flex items-stretch shrink-0 bg-[--tw-page-bg] dark:bg-[--tw-page-bg-dark]" data-sticky="true" data-sticky-class="shadow-sm" data-sticky-name="header" id="header">
 
           <div className="container-fixed flex justify-between items-stretch lg:gap-4" id="header_container">
 
             <div className="flex gap-1 lg:hidden items-center -ms-1">
               <a className="shrink-0" href="html/demo1.html">
-                <img className="max-h-[25px] w-full" src="assets/media/app/mini-logo.svg" />
+                <img className="max-h-[25px] w-full" src="media/app/mini-logo.svg" />
               </a>
               <div className="flex items-center">
                 <button className="btn btn-icon btn-light btn-clear btn-sm" data-drawer-toggle="#sidebar">
@@ -24,7 +24,7 @@ export default function Header() {
 
               <div className="flex items-stretch" data-reparent="true" data-reparent-mode="prepend|lg:prepend" data-reparent-target="body|lg:#mega_menu_container">
 
-                <div className="hidden lg:flex lg:items-stretch" data-drawer="true" data-drawer-className="drawer drawer-start fixed z-10 top-0 bottom-0 w-full me-5 max-w-[250px] p-5 lg:p-0 overflow-auto" data-drawer-enable="true|lg:false" id="mega_menu_wrapper">
+                <div className="hidden lg:flex lg:items-stretch" data-drawer="true" data-drawer-class="drawer drawer-start fixed z-10 top-0 bottom-0 w-full me-5 max-w-[250px] p-5 lg:p-0 overflow-auto" data-drawer-enable="true|lg:false" id="mega_menu_wrapper">
 
                   <div className="menu flex-col lg:flex-row gap-5 lg:gap-7.5" data-menu="true" id="mega_menu">
 
@@ -497,7 +497,7 @@ export default function Header() {
                               </a>
                             </div>
                             <div className="menu-item">
-                              <a className="menu-link border border-transparent menu-link-hover:!bg-light menu-link-hover:border-gray-200 menu-item-active:!bg-light menu-item-active:border-gray-200 dark:menu-link-hover:!bg-coal-600 dark:menu-link-hover:border-gray-100 dark:menu-item-active:!bg-coal-600 dark:menu-item-active:border-gray-100" href="">
+                              <a className="menu-link border border-transparent menu-link-hover:!bg-light menu-link-hover:border-gray-200 menu-item-active:!bg-light menu-item-active:border-gray-200 dark:menu-link-hover:!bg-coal-600 dark:menu-link-hover:border-gray-100 dark:menu-item-active:!bg-coal-600 dark:menu-item-active:border-gray-100" href="#">
                                 <span className="menu-icon">
                                   <i className="ki-filled ki-verify">
                                   </i>
@@ -513,7 +513,7 @@ export default function Header() {
                               </a>
                             </div>
                             <div className="menu-item">
-                              <a className="menu-link border border-transparent menu-link-hover:!bg-light menu-link-hover:border-gray-200 menu-item-active:!bg-light menu-item-active:border-gray-200 dark:menu-link-hover:!bg-coal-600 dark:menu-link-hover:border-gray-100 dark:menu-item-active:!bg-coal-600 dark:menu-item-active:border-gray-100" href="">
+                              <a className="menu-link border border-transparent menu-link-hover:!bg-light menu-link-hover:border-gray-200 menu-item-active:!bg-light menu-item-active:border-gray-200 dark:menu-link-hover:!bg-coal-600 dark:menu-link-hover:border-gray-100 dark:menu-item-active:!bg-coal-600 dark:menu-item-active:border-gray-100" href="#">
                                 <span className="menu-icon">
                                   <i className="ki-filled ki-euro">
                                   </i>
@@ -622,7 +622,7 @@ export default function Header() {
                                   </a>
                                 </div>
                                 <div className="menu-item">
-                                  <a className="menu-link" href="" tabIndex={0}>
+                                  <a className="menu-link" href="#" tabIndex={0}>
                                     <span className="menu-title grow-0">
                                       Tax Info
                                     </span>
@@ -634,7 +634,7 @@ export default function Header() {
                                   </a>
                                 </div>
                                 <div className="menu-item">
-                                  <a className="menu-link" href="" tabIndex={0}>
+                                  <a className="menu-link" href="#" tabIndex={0}>
                                     <span className="menu-title grow-0">
                                       Invoices
                                     </span>
@@ -646,7 +646,7 @@ export default function Header() {
                                   </a>
                                 </div>
                                 <div className="menu-item">
-                                  <a className="menu-link" href="" tabIndex={0}>
+                                  <a className="menu-link" href="#" tabIndex={0}>
                                     <span className="menu-title grow-0">
                                       Gateaways
                                     </span>
@@ -1406,13 +1406,13 @@ export default function Header() {
               <div className="menu" data-menu="true">
                 <div className="menu-item" data-menu-item-offset="20px, 10px" data-menu-item-offset-rtl="-20px, 10px" data-menu-item-placement="bottom-end" data-menu-item-placement-rtl="bottom-start" data-menu-item-toggle="dropdown" data-menu-item-trigger="click|lg:click">
                   <div className="menu-toggle btn btn-icon rounded-full">
-                    <img alt="" className="size-9 rounded-full border-2 border-success shrink-0" src="assets/media/avatars/300-2.png" />
+                    <img alt="" className="size-9 rounded-full border-2 border-success shrink-0" src="media/avatars/300-2.png" />
 
                   </div>
                   <div className="menu-dropdown menu-default light:border-gray-300 w-screen max-w-[250px]">
                     <div className="flex items-center justify-between px-5 py-1.5 gap-1.5">
                       <div className="flex items-center gap-2">
-                        <img alt="" className="size-9 rounded-full border-2 border-success" src="assets/media/avatars/300-2.png" />
+                        <img alt="" className="size-9 rounded-full border-2 border-success" src="media/avatars/300-2.png" />
                         <div className="flex flex-col gap-1.5">
                           <span className="text-sm text-gray-800 font-semibold leading-none">
                             Cody Fisher
@@ -1552,7 +1552,7 @@ export default function Header() {
                                 Notifications
                               </span>
                               <label className="switch switch-sm">
-                                <input checked="" name="check" type="checkbox" value="1" />
+                                <input checked="" name="check" type="checkbox" value="1" onChange={() => {}} />
 
                               </label>
                             </a>
@@ -1581,14 +1581,14 @@ export default function Header() {
                           </span>
                           <div className="flex items-center gap-1.5 rounded-md border border-gray-300 text-gray-600 p-1.5 text-2xs font-medium shrink-0">
                             English
-                            <img alt="" className="inline-block size-3.5 rounded-full" src="assets/media/flags/united-states.svg" />
+                            <img alt="" className="inline-block size-3.5 rounded-full" src="media/flags/united-states.svg" />
                           </div>
                         </div>
                         <div className="menu-dropdown menu-default light:border-gray-300 w-full max-w-[170px]">
                           <div className="menu-item active">
                             <a className="menu-link h-10" href="?dir=ltr">
                               <span className="menu-icon">
-                                <img alt="" className="inline-block size-4 rounded-full" src="assets/media/flags/united-states.svg" />
+                                <img alt="" className="inline-block size-4 rounded-full" src="media/flags/united-states.svg" />
                               </span>
                               <span className="menu-title">
                                 English
@@ -1602,7 +1602,7 @@ export default function Header() {
                           <div className="menu-item">
                             <a className="menu-link h-10" href="?dir=rtl">
                               <span className="menu-icon">
-                                <img alt="" className="inline-block size-4 rounded-full" src="assets/media/flags/saudi-arabia.svg" />
+                                <img alt="" className="inline-block size-4 rounded-full" src="media/flags/saudi-arabia.svg" />
                               </span>
                               <span className="menu-title">
                                 Arabic(Saudi)
@@ -1612,7 +1612,7 @@ export default function Header() {
                           <div className="menu-item">
                             <a className="menu-link h-10" href="?dir=ltr">
                               <span className="menu-icon">
-                                <img alt="" className="inline-block size-4 rounded-full" src="assets/media/flags/spain.svg" />
+                                <img alt="" className="inline-block size-4 rounded-full" src="media/flags/spain.svg" />
                               </span>
                               <span className="menu-title">
                                 Spanish
@@ -1622,7 +1622,7 @@ export default function Header() {
                           <div className="menu-item">
                             <a className="menu-link h-10" href="?dir=ltr">
                               <span className="menu-icon">
-                                <img alt="" className="inline-block size-4 rounded-full" src="assets/media/flags/germany.svg" />
+                                <img alt="" className="inline-block size-4 rounded-full" src="media/flags/germany.svg" />
                               </span>
                               <span className="menu-title">
                                 German
@@ -1632,7 +1632,7 @@ export default function Header() {
                           <div className="menu-item">
                             <a className="menu-link h-10" href="?dir=ltr">
                               <span className="menu-icon">
-                                <img alt="" className="inline-block size-4 rounded-full" src="assets/media/flags/japan.svg" />
+                                <img alt="" className="inline-block size-4 rounded-full" src="media/flags/japan.svg" />
                               </span>
                               <span className="menu-title">
                                 Japanese

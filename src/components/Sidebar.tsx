@@ -1,16 +1,16 @@
 export default function Sidebar() {
     return (
-        <div className="sidebar dark:bg-coal-600 bg-light border-e border-e-gray-200 dark:border-e-coal-100 fixed top-0 bottom-0 z-20 hidden lg:flex flex-col items-stretch shrink-0" data-drawer="true" data-drawer-className="drawer drawer-start top-0 bottom-0" data-drawer-enable="true|lg:false" id="sidebar">
+        <div className="sidebar dark:bg-coal-600 bg-light border-e border-e-gray-200 dark:border-e-coal-100 fixed top-0 bottom-0 z-20 hidden lg:flex flex-col items-stretch shrink-0" data-drawer="true" data-drawer-class="drawer drawer-start top-0 bottom-0" data-drawer-enable="true|lg:false" id="sidebar">
         <div className="sidebar-header hidden lg:flex items-center relative justify-between px-3 lg:px-6 shrink-0" id="sidebar_header">
           <a className="dark:hidden" href="html/demo1.html">
-            <img className="default-logo min-h-[22px] max-w-none" src="assets/media/app/default-logo.svg" />
-            <img className="small-logo min-h-[22px] max-w-none" src="assets/media/app/mini-logo.svg" />
+            <img className="default-logo min-h-[22px] max-w-none" src="media/app/default-logo.svg" />
+            <img className="small-logo min-h-[22px] max-w-none" src="media/app/mini-logo.svg" />
           </a>
           <a className="hidden dark:block" href="html/demo1.html">
-            <img className="default-logo min-h-[22px] max-w-none" src="assets/media/app/default-logo-dark.svg" />
-            <img className="small-logo min-h-[22px] max-w-none" src="assets/media/app/mini-logo.svg" />
+            <img className="default-logo min-h-[22px] max-w-none" src="media/app/default-logo-dark.svg" />
+            <img className="small-logo min-h-[22px] max-w-none" src="media/app/mini-logo.svg" />
           </a>
-          <button className="btn btn-icon btn-icon-md size-[30px] rounded-lg border border-gray-200 dark:border-gray-300 bg-light text-gray-500 hover:text-gray-700 toggle absolute start-full top-2/4 -translate-x-2/4 -translate-y-2/4 rtl:translate-x-2/4" data-toggle="body" data-toggle-className="sidebar-collapse" id="sidebar_toggle">
+          <button className="btn btn-icon btn-icon-md size-[30px] rounded-lg border border-gray-200 dark:border-gray-300 bg-light text-gray-500 hover:text-gray-700 toggle absolute start-full top-2/4 -translate-x-2/4 -translate-y-2/4 rtl:translate-x-2/4" data-toggle="body" data-toggle-class="sidebar-collapse" id="sidebar_toggle">
             <i className="ki-filled ki-black-left-line toggle-active:rotate-180 transition-all duration-300 rtl:translate rtl:rotate-180 rtl:toggle-active:rotate-0">
             </i>
           </button>
@@ -1219,7 +1219,7 @@ export default function Sidebar() {
                 </span>
               </div>
               <div className="menu-item">
-                <div className="menu-label border border-transparent gap-[10px] ps-[10px] pe-[10px] py-[6px]" href="" tabIndex={0}>
+                <div className="menu-label border border-transparent gap-[10px] ps-[10px] pe-[10px] py-[6px]" href="#" tabIndex={0}>
                   <span className="menu-icon items-start text-gray-500 dark:text-gray-400 w-[20px]">
                     <i className="ki-filled ki-users text-lg">
                     </i>
@@ -1235,7 +1235,7 @@ export default function Sidebar() {
                 </div>
               </div>
               <div className="menu-item">
-                <div className="menu-label border border-transparent gap-[10px] ps-[10px] pe-[10px] py-[6px]" href="" tabIndex={0}>
+                <div className="menu-label border border-transparent gap-[10px] ps-[10px] pe-[10px] py-[6px]" href="#" tabIndex={0}>
                   <span className="menu-icon items-start text-gray-500 dark:text-gray-400 w-[20px]">
                     <i className="ki-filled ki-questionnaire-tablet text-lg">
                     </i>
@@ -1251,7 +1251,7 @@ export default function Sidebar() {
                 </div>
               </div>
               <div className="menu-item">
-                <div className="menu-label border border-transparent gap-[10px] ps-[10px] pe-[10px] py-[6px]" href="" tabIndex={0}>
+                <div className="menu-label border border-transparent gap-[10px] ps-[10px] pe-[10px] py-[6px]" href="#" tabIndex={0}>
                   <span className="menu-icon items-start text-gray-500 dark:text-gray-400 w-[20px]">
                     <i className="ki-filled ki-handcart text-lg">
                     </i>
@@ -1272,7 +1272,7 @@ export default function Sidebar() {
                 </span>
               </div>
               <div className="menu-item">
-                <div className="menu-label border border-transparent gap-[10px] ps-[10px] pe-[10px] py-[6px]" href="" tabIndex={0}>
+                <div className="menu-label border border-transparent gap-[10px] ps-[10px] pe-[10px] py-[6px]" href="#" tabIndex={0}>
                   <span className="menu-icon items-start text-gray-500 dark:text-gray-400 w-[20px]">
                     <i className="ki-filled ki-some-files text-lg">
                     </i>
@@ -1288,7 +1288,7 @@ export default function Sidebar() {
                 </div>
               </div>
               <div className="menu-item">
-                <div className="menu-label border border-transparent gap-[10px] ps-[10px] pe-[10px] py-[6px]" href="" tabIndex={0}>
+                <div className="menu-label border border-transparent gap-[10px] ps-[10px] pe-[10px] py-[6px]" href="#" tabIndex={0}>
                   <span className="menu-icon items-start text-gray-500 dark:text-gray-400 w-[20px]">
                     <i className="ki-filled ki-note-2 text-lg">
                     </i>
