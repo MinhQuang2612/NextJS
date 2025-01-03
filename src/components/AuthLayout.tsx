@@ -11,12 +11,12 @@ const GlobalInit = dynamic(() => import("./GlobalInit"), { ssr: false });
 const AuthLayout: React.FC<AuthLayoutProps> = ({ title, children }) => {
   return (
     <>
-            <Head>
-                <title>{title}</title>
-            </Head>
-            <>{children}</>
-            <GlobalInit />
-        </>
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <>{children}</>
+      <GlobalInit />
+    </>
   );
 };
 
