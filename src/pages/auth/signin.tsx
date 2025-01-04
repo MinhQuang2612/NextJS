@@ -28,7 +28,11 @@ export default function SignIn() {
 
       // Lưu thông tin token nếu đăng nhập thành công
       localStorage.setItem("authToken", response.data.token);
+
+      localStorage.setItem("authData", JSON.stringify(response.data.data));
+      
       router.push("/dashboard");
+
     } catch (err) {
       if (axios.isAxiosError(err) && err.response) {
         setError(err.response.data.message || "Login failed");
