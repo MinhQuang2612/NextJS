@@ -55,62 +55,74 @@ export default function BrandName() {
                             </div>
                             <div className="card-body">
                                 <div data-datatable="true" data-datatable-page-size="10">
-                                    <div className="scrollable-x-auto">
-                                        <table className="table table-auto table-border" data-datatable-table="true">
+                                    <div className="overflow-x-auto">
+                                        <table className="table table-auto table-border w-full" data-datatable-table="true">
                                             <thead>
                                                 <tr>
-                                                    <th className="w-[60px] text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-check="true" type="checkbox" />
-                                                    </th>
-                                                    <th className="min-w-[300px]">
+
+                                                    <th className="min-w-[150px]">
                                                         <span className="sort asc">
                                                             <span className="sort-label font-normal text-gray-700">
-                                                                Subscriber
+                                                                Name
                                                             </span>
                                                             <span className="sort-icon">
                                                             </span>
                                                         </span>
                                                     </th>
-                                                    <th className="min-w-[200px]">
+                                                    <th className="min-w-[150px]">
                                                         <span className="sort">
                                                             <span className="sort-label font-normal text-gray-700">
-                                                                Products
+                                                                Số hợp đồng
                                                             </span>
                                                             <span className="sort-icon">
                                                             </span>
                                                         </span>
                                                     </th>
-                                                    <th className="min-w-[175px]">
+                                                    <th className="min-w-[175px] text-center">
                                                         <span className="sort">
                                                             <span className="sort-label font-normal text-gray-700">
-                                                                License
+                                                                Ghi chú
+                                                            </span>
+
+                                                        </span>
+                                                    </th>
+                                                    <th className="min-w-[175px] text-center">
+                                                        <span className="sort">
+                                                            <span className="sort-label font-normal text-gray-700">
+                                                                Trạng thái
+                                                            </span>
+
+                                                        </span>
+                                                    </th>
+                                                    <th className="min-w-[120px] text-center">
+                                                        <span className="sort">
+                                                            <span className="sort-label font-normal text-gray-700">
+                                                                Hạn mức
+                                                            </span>
+
+                                                        </span>
+                                                    </th>
+                                                    <th className="min-w-[150px] text-center">
+                                                        <span className="sort">
+                                                            <span className="sort-label font-normal text-gray-700">
+                                                                Hạn mức còn lại
+                                                            </span>
+
+                                                        </span>
+                                                    </th>
+                                                    <th className="min-w-[200px] text-center">
+                                                        <span className="sort asc">
+                                                            <span className="sort-label font-normal text-gray-700">
+                                                                Ngày tạo
                                                             </span>
                                                             <span className="sort-icon">
                                                             </span>
                                                         </span>
                                                     </th>
-                                                    <th className="min-w-[175px]">
-                                                        <span className="sort">
+                                                    <th className="min-w-[200px] text-center">
+                                                        <span className="sort asc">
                                                             <span className="sort-label font-normal text-gray-700">
-                                                                Last Payment
-                                                            </span>
-                                                            <span className="sort-icon">
-                                                            </span>
-                                                        </span>
-                                                    </th>
-                                                    <th className="min-w-[137px]">
-                                                        <span className="sort">
-                                                            <span className="sort-label font-normal text-gray-700">
-                                                                Enforce 2FA
-                                                            </span>
-                                                            <span className="sort-icon">
-                                                            </span>
-                                                        </span>
-                                                    </th>
-                                                    <th className="w-28 text-center">
-                                                        <span className="sort">
-                                                            <span className="sort-label font-normal text-gray-700">
-                                                                Invoices
+                                                                Ngày cập nhật
                                                             </span>
                                                             <span className="sort-icon">
                                                             </span>
@@ -120,1643 +132,1551 @@ export default function BrandName() {
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="1" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-3.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Tyler Hero
+                                                                    Brand A
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    tyler.hero@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                NFT
-                                                            </span>
-                                                            <span className="badge badge-sm">
-                                                                Artwork
-                                                            </span>
-                                                            <span className="badge badge-sm">
-                                                                Widget
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Premium
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                                4 months left
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        6 Aug, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input checked="" type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-gray-500 bg-gray-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Mới
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="2" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-1.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Esther Howard
+                                                                    Brand B
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    esther.howard@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
-                                                        <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                Design
-                                                            </span>
-                                                            <span className="badge badge-sm">
-                                                                Template
+                                                    <div className="flex flex-wrap gap-1.5">
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Trial
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                                16 days left
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        21 Apr, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-green-600 bg-green-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Hoạt động
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="3" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-11.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Jacob Jones
+                                                                    Brand C
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    jacob.jones@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                App
-                                                            </span>
-                                                            <span className="badge badge-sm">
-                                                                Plugin
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Premium
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                                2 months left
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        14 Mar, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input checked="" type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-yellow-600 bg-yellow-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Ngừng hoạt động
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="4" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-2.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Cody Fisher
+                                                                    Brand D
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    cody.fisher@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                Template
-                                                            </span>
-                                                            <span className="badge badge-sm">
-                                                                NFT
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Standard
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        20 Apr, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input checked="" type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-gray-500 bg-gray-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Mới
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="5" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-5.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Leslie Alexander
+                                                                    Brand E
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    leslie.alexander@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
+                                                
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                Artwork
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                App
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Premium
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                                6 months left
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        29 Jan, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-green-600 bg-green-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Hoạt động
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="6" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-4.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Robert Fox
+                                                                    Brand D
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    robert.fox@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                Design
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                Widget
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Trial
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                                5 days left
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        17 Mar, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-yellow-600 bg-yellow-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Ngừng hoạt động
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="7" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-20.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Guy Hawkins
+                                                                    Brand E
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    guy.hawkins@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                Plugin
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                Artwork
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Standard
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        20 Jul, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-gray-500 bg-gray-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Mới
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="8" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-23.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Theresa Webb
+                                                                    Brand F
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    theresa.webb@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                NFT
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                Template
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Trial
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                                2 days left
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        06 May, 2024
-                                                    </td>
+                                                    
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input checked="" type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-green-600 bg-green-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Hoạt động
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="9" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-22.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Marvin McKinney
+                                                                    Brand G
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    marvin.mckenney@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                Widget
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                App
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Premium
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                                1 months left
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        16 Apr, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input checked="" type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-yellow-600 bg-yellow-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Ngừng hoạt động
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="10" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-18.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Ronald Richards
+                                                                    Brand H
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    ronald.richards@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                Artwork
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                Design
-                                                            </span>
-                                                            <span className="badge badge-sm">
-                                                                Plugin
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Premium
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                                3 months left
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        15 Jun, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-gray-500 bg-gray-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Mới
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="11" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-6.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    William Wilson
+                                                                    Brand I
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    william.wilson@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                App
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                Design
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Trial
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                                10 days left
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        28 Jul, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input checked="" type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-green-600 bg-green-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Hoạt động
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="12" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-7.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Sophia Anderson
+                                                                    Brand J
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    sophia.anderson@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                Plugin
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                Template
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Standard
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        12 Aug, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-yellow-600 bg-yellow-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Ngừng hoạt động
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="13" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-8.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Mason Taylor
+                                                                    Brand K
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    mason.taylor@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                NFT
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                Artwork
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Premium
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                                5 months left
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        09 Sep, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input checked="" type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-gray-500 bg-gray-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Mới
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="14" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-9.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Isabella Lee
+                                                                    Brand L
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    isabella.lee@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                App
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                Widget
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Trial
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                                8 days left
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        22 Oct, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-green-600 bg-green-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Hoạt động
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="15" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-10.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    James Martinez
+                                                                    Brand M
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    james.martinez@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                Template
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                Design
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Standard
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        15 Nov, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input checked="" type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-yellow-600 bg-yellow-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Ngừng hoạt động
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="16" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-12.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Emily Thomas
+                                                                    Brand N
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    emily.thomas@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                Artwork
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                Plugin
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Premium
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                                7 months left
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        03 Dec, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-gray-500 bg-gray-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Mới
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="17" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-13.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Benjamin Harris
+                                                                    Brand O
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    benjamin.harris@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                NFT
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                App
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Trial
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                                12 days left
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        21 Jan, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input checked="" type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-green-600 bg-green-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Hoạt động
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="18" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-14.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Charlotte Young
+                                                                    Brand P
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    charlotte.young@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                Template
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                Plugin
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Standard
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        10 Feb, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-yellow-600 bg-yellow-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Ngừng hoạt động
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="19" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-15.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Henry Clark
+                                                                    Brand Q
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    henry.clark@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                Design
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                Widget
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Premium
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                                9 months left
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        08 Mar, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input checked="" type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-gray-500 bg-gray-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Mới
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="20" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-16.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Amelia Lewis
+                                                                    Brand R
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    amelia.lewis@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                Artwork
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                Template
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Trial
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                                3 days left
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        26 Apr, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-green-600 bg-green-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Hoạt động
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="21" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-17.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Lucas Walker
+                                                                    Brand S
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    lucas.walker@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                App
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                Plugin
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Standard
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        19 May, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input checked="" type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-yellow-600 bg-yellow-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Ngừng hoạt động
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="22" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-19.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Grace Allen
+                                                                    Brand T
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    grace.allen@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                Widget
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                Design
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Premium
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                                11 months left
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        03 Jun, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-gray-500 bg-gray-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Mới
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="23" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-21.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Jack Harris
+                                                                    Brand U
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    jack.harris@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                NFT
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                Template
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Trial
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                                9 days left
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        25 Jul, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input checked="" type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-green-600 bg-green-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Hoạt động
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="24" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-24.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Aiden King
+                                                                    Brand V
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    aiden.king@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                App
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                Artwork
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Standard
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        02 Aug, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-yellow-600 bg-yellow-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Ngừng hoạt động
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="25" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-25.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Avery Green
+                                                                    Brand X
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    avery.green@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                Plugin
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                Widget
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Premium
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                                10 months left
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        15 Sep, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input checked="" type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-gray-500 bg-gray-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Mới
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="26" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-26.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Ella White
+                                                                    Brand Y
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    ella.white@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                NFT
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                Template
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Trial
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                                14 days left
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        09 Oct, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-green-600 bg-green-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Hoạt động
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="27" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-27.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Henry King
+                                                                    Brand Z
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    henry.king@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                Design
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                App
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Standard
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        20 Nov, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input checked="" type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-yellow-600 bg-yellow-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Ngừng hoạt động
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="28" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-28.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Olivia Green
+                                                                    Brand A
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    olivia.green@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                Plugin
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                Artwork
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Premium
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                                8 months left
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        05 Dec, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-gray-500 bg-gray-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Mới
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="29" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-29.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Mason Lewis
+                                                                    Brand A
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    mason.lewis@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                Template
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                Widget
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Trial
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                                7 days left
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        22 Jan, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input checked="" type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-green-600 bg-green-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Hoạt động
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="30" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-30.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Sophia Lee
+                                                                    Brand B
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    sophia.lee@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                Design
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                Plugin
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Standard
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        11 Feb, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-yellow-600 bg-yellow-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Ngừng hoạt động
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td className="text-center">
-                                                        <input className="checkbox checkbox-sm" data-datatable-row-check="true" type="checkbox" value="31" />
-                                                    </td>
+
                                                     <td>
                                                         <div className="flex items-center gap-2.5">
-                                                            <img alt="" className="rounded-full size-7 shrink-0" src="media/avatars/300-31.png" />
+
                                                             <div className="flex flex-col">
                                                                 <a className="text-sm font-medium text-gray-900 hover:text-primary-active mb-px" href="#">
-                                                                    Matthew Martinez
+                                                                    Brand C
                                                                 </a>
-                                                                <a className="text-2sm text-gray-700 font-normal hover:text-primary-active" href="#">
-                                                                    matthew.martinez@gmail.com
-                                                                </a>
+
                                                             </div>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-wrap gap-1.5">
-                                                            <span className="badge badge-sm">
-                                                                NFT
+                                                            <span className="text-gray-800 font-medium text-sm">
+                                                                A12345
                                                             </span>
-                                                            <span className="badge badge-sm">
-                                                                App
-                                                            </span>
+
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex flex-col">
-                                                            <span className="text-sm text-gray-800 font-medium">
-                                                                Premium
-                                                            </span>
-                                                            <span className="text-xs text-gray-600">
-                                                                6 months left
-                                                            </span>
+
                                                         </div>
                                                     </td>
-                                                    <td className="text-gray-800 font-medium">
-                                                        28 Mar, 2024
-                                                    </td>
                                                     <td>
-                                                        <label className="switch switch-sm">
-                                                            <input checked="" type="checkbox" value="1" />
-                                                        </label>
+                                                        <div className="flex flex-wrap gap-1.5 justify-center">
+                                                            <span className="text-gray-500 bg-gray-100 border border-gray-400 px-2 py-1 rounded-md font-medium text-sm">
+                                                                Mới
+                                                            </span>
+                                                        </div>
                                                     </td>
                                                     <td>
                                                         <div className="flex justify-center">
-                                                            <a className="btn btn-link" href="">
-                                                                Download
-                                                            </a>
+                                                            0
                                                         </div>
+                                                    </td>
+                                                    <td>
+                                                        <div className="flex justify-center">
+                                                            0
+                                                        </div>
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
+                                                    </td>
+                                                    <td className="text-gray-800 font-medium text-center">
+                                                        02/12/2024 17:05
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -1770,9 +1690,21 @@ export default function BrandName() {
                                             per page
                                         </div>
                                         <div className="flex items-center gap-4 order-1 md:order-2">
-                                            <span data-datatable-info="true">
+                                            <span data-datatable-info="true">1-5 of 31
                                             </span>
                                             <div className="pagination" data-datatable-pagination="true">
+                                                <div className="pagination">
+                                                    <button className="btn disabled" disabled>
+                                                        <i className="ki-outline ki-black-left rtl:transform rtl:rotat e-180"></i>
+                                                    </button>
+                                                    <button className="btn active disabled" disabled>1</button>
+                                                    <button className="btn">2</button>
+                                                    <button className="btn">3</button>
+                                                    <button className="btn">...</button>
+                                                    <button className="btn">
+                                                        <i className="ki-outline ki-black-right rtl:transform rtl:rotat e-180"></i>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
