@@ -21,6 +21,9 @@ interface Brand {
 
 export default function BrandName() {
     const [brandData, setBrandData] = useState<Brand[]>([]);
+    const [filteredData, setFilteredData] = useState<Brand[]>([]);
+    const [searchTerm, setSearchTerm] = useState<string>("");
+    const [filterStatus, setFilterStatus] = useState<string>("");
 
     useEffect(() => {
         const fetchData = async () => {
@@ -37,12 +40,13 @@ export default function BrandName() {
                     headers: {
                         "Content-Type": "application/json",
                         Accept: "application/json",
-                        Authorization: `Bearer ${authToken}`, // Sử dụng token trong header
+                        Authorization: `Bearer ${authToken}`, 
                     },
                 };
 
                 const response = await axios.request(config);
                 setBrandData(response.data.data);
+                setFilteredData(response.data.data);
 
             } catch (error) {
                 console.error("Lỗi khi gọi API: ", error);
@@ -51,6 +55,26 @@ export default function BrandName() {
 
         fetchData();
     }, []);
+
+    useEffect(() => {
+        let filtered = [...brandData];
+    
+        // Tìm kiếm theo tên hoặc số hợp đồng
+        if (searchTerm) {
+            const regex = new RegExp(searchTerm.split('').join('.*'), 'i');
+            filtered = filtered.filter((brand) =>
+                regex.test(brand.name) || regex.test(brand.contract_num)
+            );
+        }
+    
+        // Lọc theo trạng thái
+        if (filterStatus) {
+            filtered = filtered.filter((brand) => brand.status.value === filterStatus);
+        }
+    
+        setFilteredData(filtered);
+    }, [searchTerm, filterStatus, brandData]);
+    
 
     return (
         <DashboardLayout title="Quản lý Brandname">
@@ -81,23 +105,25 @@ export default function BrandName() {
                                         <label className="input input-sm">
                                             <i className="ki-filled ki-magnifier">
                                             </i>
-                                            <input placeholder="Tìm Brandname hoặc số hợp đồng" type="text" value="" style={{ width: "200px" }}>
+                                            <input placeholder="Tìm theo Brandname hoặc số hợp đồng" type="text" style={{ width: "220px" }} value={searchTerm}
+                                    onChange={(e) => setSearchTerm(e.target.value)}>
                                             </input>
                                         </label>
                                     </div>
                                     <div className="flex flex-wrap gap-2.5">
-                                        <select className="select select-sm w-40">
+                                        <select className="select select-sm w-40" value={filterStatus}
+                                onChange={(e) => setFilterStatus(e.target.value)}>
                                             <option value="" disabled selected>
                                                 Chọn trạng thái
                                             </option>
-                                            <option value="1">
-                                                Active
+                                            <option value="new">
+                                                Mới
                                             </option>
-                                            <option value="2">
-                                                Disabled
+                                            <option value="active">
+                                                Hoạt động
                                             </option>
-                                            <option value="3">
-                                                Pending
+                                            <option value="inactive">
+                                                Ngừng hoạt động
                                             </option>
                                         </select>
                                     </div>
@@ -182,7 +208,7 @@ export default function BrandName() {
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                {brandData.map((brand, index) => {
+                                                {filteredData.map((brand, index) => {
                                                     
                                                     const statusColor = brand?.status?.color || 'default'; 
 
