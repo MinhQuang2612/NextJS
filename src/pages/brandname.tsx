@@ -113,7 +113,7 @@ export default function BrandName() {
                                     <div className="flex flex-wrap gap-2.5">
                                         <select className="select select-sm w-40" value={filterStatus}
                                 onChange={(e) => setFilterStatus(e.target.value)}>
-                                            <option value="" disabled selected>
+                                            <option value="">
                                                 Chọn trạng thái
                                             </option>
                                             <option value="new">
