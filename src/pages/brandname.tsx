@@ -39,7 +39,7 @@ export default function BrandName() {
 
                 const config = {
                     method: "get",
-                    url: "https://api.gw-sms.com/api/portal/brand?page[size]=10&page[number]=1",
+                    url: "https://api.gw-sms.com/api/portal/brand?page[size]=30&page[number]=1",
                     headers: {
                         "Content-Type": "application/json",
                         Accept: "application/json",
@@ -305,15 +305,47 @@ export default function BrandName() {
                                             <span data-datatable-info="true">1-5 of 31
                                             </span>
                                             <div className="pagination flex items-center gap-2">
-                                                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                                                    <button
-                                                        key={page}
-                                                        className={`btn ${page === currentPage ? "active" : ""}`}
-                                                        onClick={() => handlePageChange(page)}
-                                                    >
-                                                        {page}
-                                                    </button>
-                                                ))}
+                                                {/* Nút quay lại */}
+                                                <button
+                                                    className={`btn ${currentPage === 1 ? "btn-disabled" : ""}`}
+                                                    onClick={() => handlePageChange(currentPage - 1)}
+                                                    disabled={currentPage === 1}
+                                                >
+                                                    <i className="ki-outline ki-black-left rtl:transform rtl:rotate-180"></i>
+                                                </button>
+
+                                                {/* Hiển thị các số trang */}
+                                                {Array.from({ length: totalPages }, (_, i) => i + 1)
+                                                    .filter((page) => {
+                                                        if (totalPages <= 5) {
+                                                            return true; // Hiển thị tất cả nếu số trang <= 5
+                                                        }
+                                                        if (currentPage <= 3) {
+                                                            return page <= 4; // Hiển thị 1, 2, 3, 4 khi đang ở trang đầu
+                                                        }
+                                                        if (currentPage >= totalPages - 2) {
+                                                            return page >= totalPages - 3; // Hiển thị 4 trang cuối
+                                                        }
+                                                        return Math.abs(page - currentPage) <= 1; // Hiển thị trang gần nhất
+                                                    })
+                                                    .map((page) => (
+                                                        <button
+                                                            key={page}
+                                                            className={`btn ${page === currentPage ? "active" : ""}`}
+                                                            onClick={() => handlePageChange(page)}
+                                                        >
+                                                            {page}
+                                                        </button>
+                                                    ))}
+
+                                                {/* Nút tiến tới */}
+                                                <button
+                                                    className={`btn ${currentPage === totalPages ? "btn-disabled" : ""}`}
+                                                    onClick={() => handlePageChange(currentPage + 1)}
+                                                    disabled={currentPage === totalPages}
+                                                >
+                                                    <i className="ki-outline ki-black-right rtl:transform rtl:rotat e-180"></i>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
