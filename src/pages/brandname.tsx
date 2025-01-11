@@ -25,10 +25,13 @@ export default function BrandName() {
     const [searchTerm, setSearchTerm] = useState<string>("");
     const [filterStatus, setFilterStatus] = useState<string>("");
 
+    const [itemsPerPage, setItemsPerPage] = useState<number>(5);
+    const [currentPage, setCurrentPage] = useState<number>(1);
+
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const authToken = localStorage.getItem("authToken"); 
+                const authToken = localStorage.getItem("authToken");
                 if (!authToken) {
                     console.error("Token không tồn tại. Vui lòng đăng nhập lại.");
                     return;
@@ -40,7 +43,7 @@ export default function BrandName() {
                     headers: {
                         "Content-Type": "application/json",
                         Accept: "application/json",
-                        Authorization: `Bearer ${authToken}`, 
+                        Authorization: `Bearer ${authToken}`,
                     },
                 };
 
@@ -58,7 +61,7 @@ export default function BrandName() {
 
     useEffect(() => {
         let filtered = [...brandData];
-    
+
         // Tìm kiếm theo tên hoặc số hợp đồng
         if (searchTerm) {
             const regex = new RegExp(searchTerm.split('').join('.*'), 'i');
@@ -66,15 +69,26 @@ export default function BrandName() {
                 regex.test(brand.name) || regex.test(brand.contract_num)
             );
         }
-    
+
         // Lọc theo trạng thái
         if (filterStatus) {
             filtered = filtered.filter((brand) => brand.status.value === filterStatus);
         }
-    
+
         setFilteredData(filtered);
     }, [searchTerm, filterStatus, brandData]);
-    
+
+    // Tính toán dữ liệu hiển thị trên mỗi trang
+    const paginatedData = filteredData.slice(
+        (currentPage - 1) * itemsPerPage,
+        currentPage * itemsPerPage
+    );
+
+    const totalPages = Math.ceil(filteredData.length / itemsPerPage); // Tổng số trang
+
+    const handlePageChange = (page: number) => {
+        setCurrentPage(page);
+    };
 
     return (
         <DashboardLayout title="Quản lý Brandname">
@@ -106,13 +120,13 @@ export default function BrandName() {
                                             <i className="ki-filled ki-magnifier">
                                             </i>
                                             <input placeholder="Tìm theo Brandname hoặc số hợp đồng" type="text" style={{ width: "220px" }} value={searchTerm}
-                                    onChange={(e) => setSearchTerm(e.target.value)}>
+                                                onChange={(e) => setSearchTerm(e.target.value)}>
                                             </input>
                                         </label>
                                     </div>
                                     <div className="flex flex-wrap gap-2.5">
                                         <select className="select select-sm w-40" value={filterStatus}
-                                onChange={(e) => setFilterStatus(e.target.value)}>
+                                            onChange={(e) => setFilterStatus(e.target.value)}>
                                             <option value="">
                                                 Chọn trạng thái
                                             </option>
@@ -208,17 +222,17 @@ export default function BrandName() {
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                {filteredData.map((brand, index) => {
-                                                    
-                                                    const statusColor = brand?.status?.color || 'default'; 
+                                                {paginatedData.map((brand, index) => {
 
-                                                    
+                                                    const statusColor = brand?.status?.color || 'default';
+
+
                                                     const colorClasses = {
                                                         default: 'bg-gray-100 text-gray-500',
-                                                        success: 'bg-green-100 text-green-600', 
-                                                        warning: 'bg-yellow-100 text-yellow-600', 
-                                                        error: 'bg-red-100 text-red-600', 
-                                                        
+                                                        success: 'bg-green-100 text-green-600',
+                                                        warning: 'bg-yellow-100 text-yellow-600',
+                                                        error: 'bg-red-100 text-red-600',
+
                                                     };
 
                                                     const statusClass = colorClasses[statusColor] || colorClasses['default'];
@@ -278,26 +292,28 @@ export default function BrandName() {
                                     <div className="card-footer justify-center md:justify-between flex-col md:flex-row gap-5 text-gray-600 text-2sm font-medium">
                                         <div className="flex items-center gap-2 order-2 md:order-1">
                                             Show
-                                            <select className="select select-sm w-16" data-datatable-size="true" name="perpage">
+                                            <select className="select select-sm w-16" data-datatable-size="true" name="perpage" value={itemsPerPage}
+                                                onChange={(e) => setItemsPerPage(Number(e.target.value))}>
+                                                <option value="5">5</option>
+                                                <option value="10">10</option>
+                                                <option value="20">20</option>
+                                                <option value="30">30</option>
                                             </select>
                                             per page
                                         </div>
                                         <div className="flex items-center gap-4 order-1 md:order-2">
                                             <span data-datatable-info="true">1-5 of 31
                                             </span>
-                                            <div className="pagination" data-datatable-pagination="true">
-                                                <div className="pagination">
-                                                    <button className="btn disabled" disabled>
-                                                        <i className="ki-outline ki-black-left rtl:transform rtl:rotat e-180"></i>
+                                            <div className="pagination flex items-center gap-2">
+                                                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                                                    <button
+                                                        key={page}
+                                                        className={`btn ${page === currentPage ? "active" : ""}`}
+                                                        onClick={() => handlePageChange(page)}
+                                                    >
+                                                        {page}
                                                     </button>
-                                                    <button className="btn active disabled" disabled>1</button>
-                                                    <button className="btn">2</button>
-                                                    <button className="btn">3</button>
-                                                    <button className="btn">...</button>
-                                                    <button className="btn">
-                                                        <i className="ki-outline ki-black-right rtl:transform rtl:rotat e-180"></i>
-                                                    </button>
-                                                </div>
+                                                ))}
                                             </div>
                                         </div>
                                     </div>
