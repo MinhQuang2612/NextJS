@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import DashboardLayout from "@/components/DashboardLayout";
+import { DateRangePicker } from 'react-date-range';
+import 'react-date-range/dist/styles.css'; // main css file
+import 'react-date-range/dist/theme/default.css'; // theme css file
 
 interface Brand {
     id: number;
@@ -47,6 +50,18 @@ export default function Campaign() {
     const [sortConfig, setSortConfig] = useState<SortConfig>({
         key: '',
         direction: ''
+    });
+    const [showSentTimePicker, setShowSentTimePicker] = useState<boolean>(false);
+    const [showCreatedAtPicker, setShowCreatedAtPicker] = useState<boolean>(false);
+    const [sentTimeRange, setSentTimeRange] = useState<any>({
+        startDate: new Date(),
+        endDate: new Date(),
+        key: 'selection'
+    });
+    const [createdAtRange, setCreatedAtRange] = useState<any>({
+        startDate: new Date(),
+        endDate: new Date(),
+        key: 'selection'
     });
 
     useEffect(() => {
@@ -163,6 +178,14 @@ export default function Campaign() {
         setCurrentPage(1);
     };
 
+    const handleSentTimeRangeChange = (ranges: any) => {
+        setSentTimeRange(ranges.selection);
+    };
+
+    const handleCreatedAtRangeChange = (ranges: any) => {
+        setCreatedAtRange(ranges.selection);
+    };
+
     return (
         <DashboardLayout title="Quản lý Campaign">
             <main className="grow content pt-5" id="content" role="content">
@@ -223,14 +246,34 @@ export default function Campaign() {
                                         </select>
                                     </div>
                                     <div className="flex">
-                                        <button className="btn btn-sm btn-light">
+                                        <button className="btn btn-sm btn-light" onClick={() => setShowSentTimePicker(!showSentTimePicker)}>
                                             Thời gian gửi
                                         </button>
+                                        {showSentTimePicker && (
+                                            <div style={{ position: 'relative' }}>
+                                                <DateRangePicker
+                                                    ranges={[sentTimeRange]}
+                                                    onChange={handleSentTimeRangeChange}
+                                                    className="absolute z-50"
+                                                    style={{ position: 'absolute', zIndex: 1000 }}
+                                                />
+                                            </div>
+                                        )}
                                     </div>
                                     <div className="flex">
-                                        <button className="btn btn-sm btn-light">
+                                        <button className="btn btn-sm btn-light" onClick={() => setShowCreatedAtPicker(!showCreatedAtPicker)}>
                                             Thời gian tạo
                                         </button>
+                                        {showCreatedAtPicker && (
+                                            <div style={{ position: 'relative' }}>
+                                                <DateRangePicker
+                                                    ranges={[createdAtRange]}
+                                                    onChange={handleCreatedAtRangeChange}
+                                                    className="absolute z-50"
+                                                    style={{ position: 'absolute', zIndex: 1000 }}
+                                                />
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             </div>
